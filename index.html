@@ -1,0 +1,651 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kyrael Booster - GameLoop & PUBG Mobile Performans Artırıcı</title>
+    <meta name="description" content="Kyrael Booster, Tencent GameLoop emülatörünüzü optimize ederek PUBG Mobile'da 120/165 FPS kilitlerini açar, gecikmeyi düşürür ve RAM temizliği yapar.">
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Orbitron:wght@600;700;800;900&display=swap" rel="stylesheet">
+    <!-- FontAwesome for Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <!-- CSS Stylesheet -->
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <!-- Header / Navbar -->
+    <header class="header">
+        <div class="container navbar">
+            <div class="logo-area">
+                <div class="logo-dot"></div>
+                <span class="logo-text">KYRAEL <span class="accent-text">BOOSTER</span></span>
+            </div>
+            <nav class="nav-links">
+                <a href="#features" class="nav-item">Özellikler</a>
+                <a href="#about" class="nav-item">Hakkımızda</a>
+                <a href="#guide" class="nav-item">Kullanım Rehberi</a>
+                <a href="#faq" class="nav-item">SSS</a>
+                <a href="KyraelBooster.exe" download="KyraelBooster.exe" class="btn btn-nav">Hemen İndir</a>
+            </nav>
+            <button class="mobile-nav-toggle" aria-label="Menüyü Aç">
+                <i class="fa-solid fa-bars"></i>
+            </button>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="hero-section">
+        <div class="hero-glow-1"></div>
+        <div class="hero-glow-2"></div>
+        <div class="container hero-grid">
+            <div class="hero-content">
+                <div class="badge-new">
+                    <span class="badge-dot"></span>
+                    <span class="badge-text">Sürüm v1.4.0 Aktif</span>
+                </div>
+                <h1 class="hero-title">GameLoop Deneyiminizi <br><span class="gradient-text">Zirveye Taşıyın</span></h1>
+                <p class="hero-subtitle">
+                    "Emülatör başlatılamadı" hatalarını tarihe gömün. Kyrael Booster; akıllı RAM temizliği, DirectX önceliklendirmesi, servis onarımı ve 120 FPS kayıt defteri kilidiyle PUBG Mobile'da akıcı bir oyun sunar.
+                </p>
+                <div class="hero-actions">
+                    <a href="KyraelBooster.exe" download="KyraelBooster.exe" class="btn btn-primary btn-glow">
+                        <i class="fa-solid fa-download"></i> Ücretsiz İndir
+                    </a>
+                    <a href="#features" class="btn btn-secondary">
+                        Özellikleri Keşfet
+                    </a>
+                </div>
+                <div class="hero-meta">
+                    <div class="meta-item"><i class="fa-solid fa-shield-halved text-success"></i> %100 Güvenli & Reklamsız</div>
+                    <div class="meta-item"><i class="fa-solid fa-gauge-high text-cyan"></i> Gecikmesiz Oynanış</div>
+                </div>
+            </div>
+
+            <!-- Visual App Mockup Simulator -->
+            <div class="mockup-container" id="simulator">
+                <div class="app-mockup">
+                    <div class="app-header">
+                        <div class="app-window-controls">
+                            <span class="dot-red"></span>
+                            <span class="dot-yellow"></span>
+                            <span class="dot-green"></span>
+                        </div>
+                        <span class="app-title">KYRAEL BOOSTER PANEL v1.4.0</span>
+                        <div class="app-admin-badge">YÖNETİCİ AKTİF</div>
+                    </div>
+                    
+                    <div class="app-body">
+                        <!-- Left Mock Sidebar -->
+                        <div class="app-sidebar">
+                            <div class="sidebar-logo">KYRAEL</div>
+                            <div class="sidebar-sub">BOOSTER</div>
+                            <div class="sidebar-menu">
+                                <div class="menu-item active" data-tab="panel"><i class="fa-solid fa-chart-line"></i> Panel</div>
+                                <div class="menu-item" data-tab="motor"><i class="fa-solid fa-sliders"></i> Motor Ayarları</div>
+                                <div class="menu-item" data-tab="grafik"><i class="fa-solid fa-bolt"></i> Grafik & Tweak</div>
+                                <div class="menu-item" data-tab="library"><i class="fa-solid fa-gamepad"></i> Kütüphane</div>
+                            </div>
+                        </div>
+
+                        <!-- Right Mock Content -->
+                        <div class="app-content">
+                            <!-- TAB 1: PANEL -->
+                            <div class="mock-tab-page active" id="mock-tab-panel">
+                                <!-- Circular Gauges -->
+                                <div class="gauges-grid">
+                                    <div class="gauge-card">
+                                        <div class="circle-box">
+                                            <svg class="circle-svg" viewBox="0 0 100 100">
+                                                <circle class="circle-bg" cx="50" cy="50" r="40" />
+                                                <circle class="circle-bar circle-cpu" cx="50" cy="50" r="40" />
+                                            </svg>
+                                            <div class="gauge-value" id="val-cpu">34%</div>
+                                        </div>
+                                        <span class="gauge-label">CPU</span>
+                                    </div>
+                                    <div class="gauge-card">
+                                        <div class="circle-box">
+                                            <svg class="circle-svg" viewBox="0 0 100 100">
+                                                <circle class="circle-bg" cx="50" cy="50" r="40" />
+                                                <circle class="circle-bar circle-gpu" cx="50" cy="50" r="40" />
+                                            </svg>
+                                            <div class="gauge-value" id="val-gpu">42%</div>
+                                        </div>
+                                        <span class="gauge-label">GPU</span>
+                                    </div>
+                                    <div class="gauge-card">
+                                        <div class="circle-box">
+                                            <svg class="circle-svg" viewBox="0 0 100 100">
+                                                <circle class="circle-bg" cx="50" cy="50" r="40" />
+                                                <circle class="circle-bar circle-ram" cx="50" cy="50" r="40" />
+                                            </svg>
+                                            <div class="gauge-value" id="val-ram">78%</div>
+                                        </div>
+                                        <span class="gauge-label">RAM</span>
+                                    </div>
+                                </div>
+
+                                <!-- Terminal console simulator -->
+                                <div class="mock-terminal">
+                                    <div class="terminal-header">
+                                        <span>OPTİMİZASYON LOG MONİTÖRÜ</span>
+                                        <span class="terminal-dots"></span>
+                                    </div>
+                                    <div class="terminal-body" id="terminal-lines">
+                                        <!-- Populated via script -->
+                                    </div>
+                                </div>
+
+                                <!-- Interactive Button -->
+                                <div class="boost-action-area">
+                                    <button class="btn btn-boost" id="btn-mock-boost">BOOST ET</button>
+                                </div>
+                            </div>
+
+                            <!-- TAB 2: MOTOR AYARLARI -->
+                            <div class="mock-tab-page" id="mock-tab-motor">
+                                <h4 class="mock-page-title">Motor ve İşlemci Yapılandırması</h4>
+                                <div class="mock-form-group">
+                                    <label class="mock-label">Grafik Arayüzü</label>
+                                    <div class="mock-radios">
+                                        <label class="mock-radio-label"><input type="radio" name="mock-engine" checked> Akıllı Mod (Auto / Vulkan)</label>
+                                        <label class="mock-radio-label"><input type="radio" name="mock-engine"> DirectX+ Modu (Kararlı / RTX)</label>
+                                        <label class="mock-radio-label"><input type="radio" name="mock-engine"> OpenGL+ Modu (Eski Ekran Kartları)</label>
+                                    </div>
+                                </div>
+                                <div class="mock-form-row">
+                                    <div class="mock-form-group">
+                                        <label class="mock-label">Cores (Çekirdek):</label>
+                                        <select class="mock-select" id="mock-cpu-select">
+                                            <option>2 Çekirdek</option>
+                                            <option selected>4 Çekirdek</option>
+                                            <option>8 Çekirdek</option>
+                                            <option>9 Çekirdek</option>
+                                            <option>10 Çekirdek</option>
+                                            <option>11 Çekirdek</option>
+                                            <option>12 Çekirdek</option>
+                                            <option>13 Çekirdek</option>
+                                            <option>14 Çekirdek</option>
+                                            <option>15 Çekirdek</option>
+                                            <option>16 Çekirdek</option>
+                                        </select>
+                                    </div>
+                                    <div class="mock-form-group">
+                                        <label class="mock-label">RAM (Bellek):</label>
+                                        <select class="mock-select" id="mock-ram-select">
+                                            <option>2 GB RAM</option>
+                                            <option selected>4 GB RAM</option>
+                                            <option>8 GB RAM</option>
+                                            <option>12 GB RAM</option>
+                                            <option>16 GB RAM</option>
+                                            <option>20 GB RAM</option>
+                                            <option>24 GB RAM</option>
+                                            <option>25 GB RAM</option>
+                                            <option>32 GB RAM</option>
+                                        </select>
+                                    </div>
+                                </div>
+                                <div class="mock-form-group">
+                                    <label class="mock-label">Ekran DPI:</label>
+                                    <select class="mock-select">
+                                        <option>120 DPI</option>
+                                        <option>160 DPI</option>
+                                        <option selected>240 DPI</option>
+                                        <option>320 DPI</option>
+                                        <option>480 DPI</option>
+                                    </select>
+                                </div>
+                                <button class="btn btn-boost mock-btn-apply" id="btn-mock-apply-settings">AYARLARI UYGULA</button>
+                            </div>
+
+                            <!-- TAB 3: GRAFİK & TWEAK -->
+                            <div class="mock-tab-page" id="mock-tab-grafik">
+                                <h4 class="mock-page-title">Gelişmiş Performans & Grafik</h4>
+                                <div class="mock-checkboxes">
+                                    <label class="mock-check-label"><input type="checkbox" checked> 120/165 FPS Kilidi (Kayıt Defteri)</label>
+                                    <label class="mock-check-label"><input type="checkbox" checked> DirectX Shader Önbellek Optimizasyonu</label>
+                                    <label class="mock-check-label"><input type="checkbox" checked> CPU Core Parking Kapat (Maksimum Performans)</label>
+                                    <label class="mock-check-label"><input type="checkbox" checked> Sistem Gecikme Önleme (EPP & Responsiveness)</label>
+                                    <label class="mock-check-label"><input type="checkbox" checked> DNS Optimizasyonu (Ping Düşürücü)</label>
+                                    <label class="mock-check-label"><input type="checkbox"> Otomatik RAM Temizleyici (Her 5 Dk)</label>
+                                </div>
+                                <button class="btn btn-boost mock-btn-apply" id="btn-mock-apply-tweaks">AYARLARI UYGULA</button>
+                            </div>
+
+                            <!-- TAB 4: KÜTÜPHANE -->
+                            <div class="mock-tab-page" id="mock-tab-library">
+                                <h4 class="mock-page-title">Oyun Kütüphanesi</h4>
+                                <div class="mock-game-card">
+                                    <div class="mock-game-info">
+                                        <i class="fa-solid fa-gamepad mock-game-icon"></i>
+                                        <div>
+                                            <div class="mock-game-title">PUBG Mobile</div>
+                                            <div class="mock-game-sub">Tencent GameLoop Emülatörü</div>
+                                        </div>
+                                    </div>
+                                    <span class="mock-game-status">Hazır</span>
+                                </div>
+                                <div class="mock-form-group">
+                                    <label class="mock-label">GameLoop Kurulum Klasörü</label>
+                                    <div class="mock-input-group">
+                                        <input type="text" class="mock-input" value="C:\Program Files\TxGameAssistant" readonly>
+                                        <button class="mock-btn-browse">Seç</button>
+                                    </div>
+                                </div>
+                                <div class="boost-action-area" style="margin-top: 24px;">
+                                    <button class="btn btn-boost btn-glow" id="btn-mock-launch">OYUNU BAŞLAT</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Features Section -->
+    <section class="features-section" id="features">
+        <div class="container">
+            <div class="section-header">
+                <span class="subtitle">GELİŞMİŞ MOTOR</span>
+                <h2 class="section-title">Oyununuzu Uçuracak Özellikler</h2>
+                <p class="section-desc">
+                    Kyrael Booster, arka planda çalışan ve oyun deneyiminizi baltalayan tüm etkenleri ortadan kaldırır.
+                </p>
+            </div>
+
+            <div class="features-grid">
+                <!-- Feature 1 -->
+                <div class="feature-card">
+                    <div class="feature-icon-wrapper purple-glow">
+                        <i class="fa-solid fa-brain"></i>
+                    </div>
+                    <h3 class="feature-card-title">RAM & Standby Önbellek Temizliği</h3>
+                    <p class="feature-card-text">
+                        Sistem kritik işlemlerine dokunmadan, kullanılmayan bellek alanlarını ve OS Standby önbelleğini serbest bırakarak ani takılma/donmaları sıfırlar.
+                    </p>
+                </div>
+
+                <!-- Feature 2 -->
+                <div class="feature-card">
+                    <div class="feature-icon-wrapper pink-glow">
+                        <i class="fa-solid fa-gamepad"></i>
+                    </div>
+                    <h3 class="feature-card-title">120/165 FPS Kilidi</h3>
+                    <p class="feature-card-text">
+                        GameLoop ve PUBG Mobile kayıt defteri ayarlarını optimize ederek standart limitleri aşar, donanımınızın gücünü ortaya çıkarır.
+                    </p>
+                </div>
+
+                <!-- Feature 3 -->
+                <div class="feature-card">
+                    <div class="feature-icon-wrapper cyan-glow">
+                        <i class="fa-solid fa-wifi"></i>
+                    </div>
+                    <h3 class="feature-card-title">DNS Optimizer & Flush</h3>
+                    <p class="feature-card-text">
+                        En hızlı DNS sunucusunu test edip bağlar ve DNS önbelleğini (flushdns) temizleyerek ağ gecikmesi ve mermi kayıplarını önler.
+                    </p>
+                </div>
+
+                <!-- Feature 4 -->
+                <div class="feature-card">
+                    <div class="feature-icon-wrapper green-glow">
+                        <i class="fa-solid fa-stethoscope"></i>
+                    </div>
+                    <h3 class="feature-card-title">Emülatör Doktoru</h3>
+                    <p class="feature-card-text">
+                        "Emülatör başlatılamadı" hatasına neden olan kilitli GameLoop süreçlerini kapatır, emülatör servisini baştan yapılandırarak hatasız açılış sağlar.
+                    </p>
+                </div>
+
+                <!-- Feature 5 -->
+                <div class="feature-card">
+                    <div class="feature-icon-wrapper red-glow">
+                        <i class="fa-solid fa-broom"></i>
+                    </div>
+                    <h3 class="feature-card-title">Dosya & Gölgelendirici Temizleyici</h3>
+                    <p class="feature-card-text">
+                        GameLoop'un biriktirdiği gereksiz log, çökme dökümü (crash dump) ve önbellek dosyalarını temizleyerek performansı en üst seviyede tutar.
+                    </p>
+                </div>
+
+                <!-- Feature 6 -->
+                <div class="feature-card">
+                    <div class="feature-icon-wrapper gold-glow">
+                        <i class="fa-solid fa-cpu"></i>
+                    </div>
+                    <h3 class="feature-card-title">Hibrit CPU P-Core Sabitleme</h3>
+                    <p class="feature-card-text">
+                        İşlemleri yalnızca P-Core (Performans) çekirdeklerine atayarak Intel E-Core çekirdek geçişlerinden kaynaklanan micro-stutter kasma sorununu bitirir.
+                    </p>
+                </div>
+
+                <!-- Feature 7 -->
+                <div class="feature-card">
+                    <div class="feature-icon-wrapper blue-glow">
+                        <i class="fa-solid fa-bolt"></i>
+                    </div>
+                    <h3 class="feature-card-title">FSE & IFEO Öncelik Şeması</h3>
+                    <p class="feature-card-text">
+                        Tam Ekran İyileştirmelerini (FSE) atlar ve Windows zamanlayıcısında (IFEO) emülatöre kalıcı yüksek öncelik vererek donanım verimini artırır.
+                    </p>
+                </div>
+
+                <!-- Feature 8 -->
+                <div class="feature-card">
+                    <div class="feature-icon-wrapper orange-glow">
+                        <i class="fa-solid fa-clock"></i>
+                    </div>
+                    <h3 class="feature-card-title">Akıllı Başlatma Gecikmesi</h3>
+                    <p class="feature-card-text">
+                        Bilgisayar başlangıcında Windows sürücülerinin yüklenmesi için özel bekleme süresi tanır. Yarış durumlarını engelleyerek sorunsuz otomatik oyun açılışı yapar.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Performance Comparison Section -->
+    <section class="performance-section" id="performance">
+        <div class="container">
+            <div class="performance-grid">
+                <div class="performance-content">
+                    <span class="subtitle">PERFORMANS TESTLERİ</span>
+                    <h2 class="section-title">Farkı Kendi Gözlerinizle Görün</h2>
+                    <p class="section-desc">
+                        Kyrael Booster uygulandıktan sonra elde edilen ortalama oyun içi test sonuçları.
+                    </p>
+                    
+                    <div class="stat-bars">
+                        <!-- Stat 1 -->
+                        <div class="stat-item">
+                            <div class="stat-info">
+                                <span class="stat-name">PUBG Mobile FPS Değeri</span>
+                                <span class="stat-value text-success">+35% Artış (120 FPS Kararlı)</span>
+                            </div>
+                            <div class="stat-bar-container">
+                                <div class="stat-bar bg-success" style="width: 90%"></div>
+                            </div>
+                        </div>
+
+                        <!-- Stat 2 -->
+                        <div class="stat-item">
+                            <div class="stat-info">
+                                <span class="stat-name">Oyun İçi Gecikme (Ping)</span>
+                                <span class="stat-value text-cyan">-25ms Düşüş (Daha Stabil)</span>
+                            </div>
+                            <div class="stat-bar-container">
+                                <div class="stat-bar bg-cyan" style="width: 75%"></div>
+                            </div>
+                        </div>
+
+                        <!-- Stat 3 -->
+                        <div class="stat-item">
+                            <div class="stat-info">
+                                <span class="stat-name">Serbest Bırakılan RAM Kapasitesi</span>
+                                <span class="stat-value text-purple">Ortalama 1.5 GB Boş Alan</span>
+                            </div>
+                            <div class="stat-bar-container">
+                                <div class="stat-bar bg-purple" style="width: 65%"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Spec Grid Card -->
+                <div class="spec-card">
+                    <h3 class="spec-title"><i class="fa-solid fa-circle-info text-pink"></i> Sistem Gereksinimleri</h3>
+                    <div class="spec-rows">
+                        <div class="spec-row">
+                            <span class="spec-label">İşletim Sistemi</span>
+                            <span class="spec-val">Windows 10 / Windows 11 (64-Bit)</span>
+                        </div>
+                        <div class="spec-row">
+                            <span class="spec-label">Gereken Emülatör</span>
+                            <span class="spec-val">Tencent GameLoop (Resmi Sürüm)</span>
+                        </div>
+                        <div class="spec-row">
+                            <span class="spec-label">Yetki İhtiyacı</span>
+                            <span class="spec-val">Yönetici Yetkisi (Gelişmiş Tweaks için)</span>
+                        </div>
+                        <div class="spec-row">
+                            <span class="spec-label">Dosya Boyutu</span>
+                            <span class="spec-val">~15 MB (Çevrimdışı Çalışır)</span>
+                        </div>
+                        <div class="spec-row">
+                            <span class="spec-label">Desteklenen Oyun</span>
+                            <span class="spec-val">PUBG Mobile (Tüm Sunucular)</span>
+                        </div>
+                    </div>
+                    <div class="spec-notice">
+                        <i class="fa-solid fa-triangle-exclamation"></i>
+                        <span>En yüksek verim için uygulamanın <strong>Yönetici Olarak Çalıştırılması</strong> önerilir.</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Us Section -->
+    <section class="about-section" id="about">
+        <div class="container">
+            <div class="about-grid">
+                <div class="about-img-wrapper">
+                    <div class="about-glow"></div>
+                    <div class="about-image-card">
+                        <i class="fa-solid fa-code-branch about-main-icon"></i>
+                        <div class="card-glass-text">
+                            <h3>Açık & Güvenli</h3>
+                            <p>Kullanıcı verilerinize dokunmadan sisteminizi optimize eder.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="about-content">
+                    <span class="subtitle">Hakkımızda</span>
+                    <h2 class="section-title">Kyrael Booster Nedir?</h2>
+                    <p class="about-desc">
+                        Kyrael Booster, Tencent GameLoop emülatöründe PUBG Mobile oynayan kullanıcıların donma, kasma, gecikme ve "emülatör başlatılamadı" gibi kronikleşen optimizasyon sorunlarını çözmek amacıyla tasarlanmış bağımsız bir yardımcı araçtır. 
+                    </p>
+                    <p class="about-desc">
+                        Program, sistem kritik işlemlerine veya oyun dosyalarına müdahale etmeden; Windows kayıt defteri (Registry), CPU çekirdek uyku modları (Core Parking), DirectX GPU öncelikleri ve TCP/IP ağ katmanı üzerinde oyun odaklı kararlı ayarlamalar yapar.
+                    </p>
+                    <div class="about-credits">
+                        <div class="credit-badge">
+                            <span class="credit-role">Program Tasarımcısı / Geliştirici</span>
+                            <span class="credit-name">Kyrael</span>
+                        </div>
+                        <div class="credit-badge">
+                            <span class="credit-role">Web Tasarımcısı</span>
+                            <span class="credit-name">Kairos</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Usage Guide Section -->
+    <section class="guide-section" id="guide">
+        <div class="container">
+            <div class="section-header text-center">
+                <span class="subtitle">Kullanım Kılavuzu</span>
+                <h2 class="section-title">Nasıl Kullanılır?</h2>
+                <p class="section-desc">Pürüzsüz 120 FPS PUBG Mobile deneyimi için aşağıdaki 4 basit adımı sırasıyla uygulayın.</p>
+            </div>
+            
+            <div class="guide-steps-grid">
+                <!-- Step 1 -->
+                <div class="guide-step-card">
+                    <div class="step-num">01</div>
+                    <h3 class="step-title">İndir ve Çalıştır</h3>
+                    <p class="step-text">Web sitemizden <code>KyraelBooster.exe</code> dosyasını indirin. İndirdikten sonra dosyaya sağ tıklayın ve <strong>"Yönetici Olarak Çalıştır"</strong> seçeneğiyle açın.</p>
+                </div>
+                <!-- Step 2 -->
+                <div class="guide-step-card">
+                    <div class="step-num">02</div>
+                    <h3 class="step-title">Ayarlarını Özelleştir</h3>
+                    <p class="step-text">Açılan panelden motor modunu, RAM kapasitesini (32 GB'a kadar), CPU çekirdek sayısını (16'ya kadar) ve istediğiniz cihaz model profilini seçin.</p>
+                </div>
+                <!-- Step 3 -->
+                <div class="guide-step-card">
+                    <div class="step-num">03</div>
+                    <h3 class="step-title">Ayarları Uygula</h3>
+                    <p class="step-text"><strong>"Ayarları Uygula"</strong> butonuna tıklayın. Program, aktif emülatör süreçlerini kapatarak ayarlarınızın GameLoop üzerine kararlı bir şekilde enjekte edilmesini sağlar.</p>
+                </div>
+                <!-- Step 4 -->
+                <div class="guide-step-card">
+                    <div class="step-num">04</div>
+                    <h3 class="step-title">Oyunu Başlat</h3>
+                    <p class="step-text">Kütüphane sekmesine geçip <strong>"OYUNU BAŞLAT"</strong> butonuna basın. Tüm sistem optimizasyonları tetiklenerek oyununuz sıfır kasma ile başlatılacaktır.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- FAQ Section -->
+    <section class="faq-section" id="faq">
+        <div class="container">
+            <div class="section-header text-center">
+                <span class="subtitle">SORULAR VE YANITLAR</span>
+                <h2 class="section-title">Sıkça Sorulan Sorular</h2>
+            </div>
+
+            <div class="faq-accordion">
+                <!-- FAQ Item 1 -->
+                <div class="faq-item">
+                    <button class="faq-question">
+                        <span>"Emülatör başlatılamadı" hatası neden oluşur ve bu program bunu nasıl çözer?</span>
+                        <i class="fa-solid fa-chevron-down"></i>
+                    </button>
+                    <div class="faq-answer">
+                        <p>
+                            Bu hata genellikle bilgisayar açılırken GameLoop'un sanal sürücü servislerinin (QMEmulatorService vb.) tam yüklenememesi veya arka planda kilitli kalmış eski emülatör süreçlerinin yeni başlatılan oyunu engellemesi nedeniyle oluşur. Kyrael Booster, oyunu açmadan önce çakışan tüm süreçleri sonlandırır, servisleri sıfırlar ve akıllı başlangıç gecikmesiyle her şeyin hazır olmasını bekler.
+                        </p>
+                    </div>
+                </div>
+
+                <!-- FAQ Item 2 -->
+                <div class="faq-item">
+                    <button class="faq-question">
+                        <span>Kyrael Booster hesabımın engellenmesine (Ban) yol açar mı?</span>
+                        <i class="fa-solid fa-chevron-down"></i>
+                    </button>
+                    <div class="faq-answer">
+                        <p>
+                            Kesinlikle hayır. Program oyun dosyalarına, belleğine veya kodlarına müdahale etmez. Yalnızca emülatörün Windows üzerindeki çalışma önceliğini artırır, işletim sistemi kayıt defteri (Registry) üzerinden FPS sınırı kilitlerini açar ve internet DNS ağ bağlantınızı optimize eder. Tamamen güvenlidir.
+                        </p>
+                    </div>
+                </div>
+
+                <!-- FAQ Item 3 -->
+                <div class="faq-item">
+                    <button class="faq-question">
+                        <span>Otomatik Boost sekansı nasıl çalışıyor?</span>
+                        <i class="fa-solid fa-chevron-down"></i>
+                    </button>
+                    <div class="faq-answer">
+                        <p>
+                            "Program Açıldığında Otomatik Olarak Boost Et" seçeneğini açtığınızda, Kyrael Booster başlar başlamaz sisteminizdeki RAM boşluklarını temizler, güç planını performans moduna alır ve belirlediğiniz süre kadar (örn. 15 saniye) Windows'un açılışta kendine gelmesini bekleyip oyunu otomatik olarak başlatır.
+                        </p>
+                    </div>
+                </div>
+
+                <!-- FAQ Item 4 -->
+                <div class="faq-item">
+                    <button class="faq-question">
+                        <span>DNS optimizasyonu ne işe yarar?</span>
+                        <i class="fa-solid fa-chevron-down"></i>
+                    </button>
+                    <div class="faq-answer">
+                        <p>
+                            DNS sunucunuz, oyundaki bağlantı paketlerinizin sunucuya giderken çözümlendiği adrestir. Yavaş bir DNS, yüksek gecikmelere (Ping) ve mermi kayıplarına neden olur. Program ping testleri ile o anki en hızlı DNS sunucusunu bulur ve internet adaptörünüzü buna adapte eder.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Download Section -->
+    <section class="download-section" id="download">
+        <div class="download-glow"></div>
+        <div class="container text-center">
+            <h2 class="download-title">Kyrael Booster'ı Hemen İndirin</h2>
+            <p class="download-desc">
+                GameLoop performansınızı maksimize edin, donmaları sonlandırın ve akıcı 120 FPS keyfini yaşayın.
+            </p>
+            <div class="download-wrapper">
+                <a href="KyraelBooster.exe" download="KyraelBooster.exe" class="btn btn-primary btn-lg btn-glow">
+                    <i class="fa-solid fa-download"></i> KyraelBooster.exe İndir (v1.4.0)
+                </a>
+                <span class="file-info">Boyut: 14.8 MB | MD5: Verified | Windows 10/11</span>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container footer-content">
+            <div class="footer-left">
+                <p class="copyright">&copy; 2026 Kyrael Booster. Tüm hakları saklıdır. Tencent Games veya GameLoop ile resmi bir bağı yoktur.</p>
+                <div class="footer-policy-links">
+                    <a href="javascript:void(0)" id="open-privacy-btn">Gizlilik Politikası</a>
+                    <span class="divider">|</span>
+                    <a href="javascript:void(0)" id="open-terms-btn">Kullanım Şartları</a>
+                </div>
+            </div>
+            <div class="social-links">
+                <a href="https://discord.gg/qwkNHPYgDc" target="_blank" rel="noopener noreferrer" class="social-item"><i class="fa-brands fa-discord"></i></a>
+                <a href="https://www.youtube.com/@kyraelpm" target="_blank" rel="noopener noreferrer" class="social-item"><i class="fa-brands fa-youtube"></i></a>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Privacy Policy Modal -->
+    <div id="privacy-modal" class="modal">
+        <div class="modal-content">
+            <span class="close-btn" id="close-privacy">&times;</span>
+            <h2>Gizlilik Politikası</h2>
+            <div class="modal-body-text">
+                <p><strong>Son Güncelleme: 14 Haziran 2026</strong></p>
+                <p>Kyrael Booster ("biz", "yazılımımız" veya "uygulamamız") olarak kullanıcılarımızın gizliliğine son derece önem veriyoruz. Bu gizlilik politikası, uygulamamızı ve web sitemizi kullandığınızda toplanan ve işlenen veriler hakkında sizi bilgilendirmek amacıyla hazırlanmıştır.</p>
+                <h3>1. Toplanan Veriler</h3>
+                <p>Uygulamamız tamamen çevrimdışı (offline) çalışabilecek bir yapıda tasarlanmıştır. Herhangi bir kişisel veri, hesap şifresi, e-posta adresi veya oyun içi aktivite verisi kesinlikle sunucularımıza gönderilmez, depolanmaz ve kaydedilmez. Program tamamen şeffaftır.</p>
+                <h3>2. İşletim Sistemi ve Donanım Bilgileri</h3>
+                <p>Kyrael Booster, çalıştırıldığı yerel bilgisayarda sadece optimizasyon yapabilmek adına GameLoop kurulum klasörünün yolunu, ağ adaptörünüzün adını ve donanım performans profillerini okur. Bu veriler sadece yerel oturum sırasında işlem yapmak için kullanılır, hiçbir şekilde dışarıya aktarılmaz.</p>
+                <h3>3. Üçüncü Taraf Paylaşımları</h3>
+                <p>Herhangi bir veri toplamadığımız için, verilerinizin üçüncü taraflarla paylaşılması veya satılması söz konusu değildir.</p>
+                <h3>4. İletişim</h3>
+                <p>Gizlilik politikamızla ilgili her türlü soru ve geri bildirim için sosyal medya kanallarımız üzerinden bizimle iletişime geçebilirsiniz.</p>
+            </div>
+        </div>
+    </div>
+
+    <!-- Terms of Use Modal -->
+    <div id="terms-modal" class="modal">
+        <div class="modal-content">
+            <span class="close-btn" id="close-terms">&times;</span>
+            <h2>Kullanım Şartları</h2>
+            <div class="modal-body-text">
+                <p><strong>Son Güncelleme: 14 Haziran 2026</strong></p>
+                <p>Kyrael Booster yazılımını indirerek veya web sitesini ziyaret ederek, aşağıdaki kullanım şartlarını kabul etmiş sayılırsınız.</p>
+                <h3>1. Kullanım Lisansı</h3>
+                <p>Uygulama, kişisel ve ticari olmayan kullanımınız için tamamen ücretsiz olarak sunulmaktadır. Yazılımın kaynak kodlarının izinsiz olarak değiştirilmesi, kopyalanması veya ücretli bir şekilde satılması yasaktır.</p>
+                <h3>2. Sorumluluk Reddi Beyanı</h3>
+                <p>Kyrael Booster, Tencent Games veya GameLoop markaları ile resmi bir bağı olmayan, bağımsız bir optimizasyon aracıdır. Program, sisteminizde kayıt defteri (Registry) ve güç yapılandırmaları gibi düşük seviyeli ayarları düzenler. Bu ayarların uygulanmasından ve oluşabilecek sistem kararsızlıklarından yazılım geliştiricisi sorumlu tutulamaz; sorumluluk tamamen kullanıcıya aittir.</p>
+                <h3>3. Ban Riskleri Hakkında</h3>
+                <p>Yazılım, oyun dosyalarını, oyun içi belleği (memory) veya paket akışlarını manipüle etmediği için anti-hile sistemleri (ACE vb.) tarafından bir hile olarak algılanmaz. Buna rağmen, üçüncü taraf yazılım kullanım kararları kullanıcının kendi sorumluluğundadır.</p>
+                <h3>4. Değişiklikler</h3>
+                <p>Tasarımcı ve geliştiriciler, kullanım şartlarını önceden bildirmeksizin güncelleme hakkını saklı tutar.</p>
+            </div>
+        </div>
+    </div>
+
+    <!-- JS Scripts -->
+    <script src="script.js"></script>
+</body>
+</html>
